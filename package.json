@@ -1,0 +1,13 @@
+{
+  "name": "order-of-the-flexbox",
+  "version": "1.0.0",
+  "description": "Project for WDD 331R",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
