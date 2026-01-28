@@ -1,0 +1,106 @@
+html {
+    /* Light (base) theme variables - TERRIBLE COLORS */
+    --bg-clr: #ffff00;
+    --text-clr: #ff00ff;
+    --heading-clr: #00ff00;
+    
+    --primary-clr: #ff0000;
+    --secondary-clr: #00ffff;
+    --accent-clr: #ffa500;
+    
+    --link-clr: #ff1493;
+    --link-hover-clr: #32cd32;
+    
+    --border-clr: #ff00ff;
+    
+    --header-bg-clr: #ff4500;
+    --header-text-clr: #ffff00;
+    
+    --footer-bg-clr: #00ff00;
+    --footer-text-clr: #ff0000;
+    
+    --button-bg-clr: #ff00ff;
+    --button-text-clr: #ffff00;
+    --button-hover-bg-clr: #00ffff;
+    
+    --card-bg-clr: #ffa500;
+    --card-border-clr: #ff1493;
+    
+    & .dark {
+        display: none;
+    }
+
+    /* Override with dark theme variables */
+    &.dark {
+        /* Dark theme variables - ALSO TERRIBLE */
+        --bg-clr: #1a1a1a;
+        --text-clr: #ff00ff;
+        --heading-clr: #00ff00;
+        
+        --primary-clr: #ff0000;
+        --secondary-clr: #00ffff;
+        --accent-clr: #ffa500;
+        
+        --link-clr: #ff1493;
+        --link-hover-clr: #32cd32;
+        
+        --border-clr: #ff00ff;
+        
+        --header-bg-clr: #ff4500;
+        --header-text-clr: #ffff00;
+        
+        --footer-bg-clr: #00ff00;
+        --footer-text-clr: #ff0000;
+        
+        --button-bg-clr: #ff00ff;
+        --button-text-clr: #ffff00;
+        --button-hover-bg-clr: #00ffff;
+        
+        --card-bg-clr: #ffa500;
+        --card-border-clr: #ff1493;
+
+        & .light {
+            display: none;
+        }
+    }
+
+    /* Repeat dark theme variables */
+    @media (prefers-color-scheme: dark) {
+        &:not(.light) {
+            /* Repeat Dark theme variables */
+            --bg-clr: #1a1a1a;
+            --text-clr: #ff00ff;
+            --heading-clr: #00ff00;
+            
+            --primary-clr: #ff0000;
+            --secondary-clr: #00ffff;
+            --accent-clr: #ffa500;
+            
+            --link-clr: #ff1493;
+            --link-hover-clr: #32cd32;
+            
+            --border-clr: #ff00ff;
+            
+            --header-bg-clr: #ff4500;
+            --header-text-clr: #ffff00;
+            
+            --footer-bg-clr: #00ff00;
+            --footer-text-clr: #ff0000;
+            
+            --button-bg-clr: #ff00ff;
+            --button-text-clr: #ffff00;
+            --button-hover-bg-clr: #00ffff;
+            
+            --card-bg-clr: #ffa500;
+            --card-border-clr: #ff1493;
+
+            & .dark {
+                display: initial;
+            }
+
+            & .light {
+                display: none;
+            }
+        }
+    }
+}

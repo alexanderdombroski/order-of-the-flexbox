@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechVision Solutions</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/theme.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__branding">
+                    <h1 class="header__logo">TechVision</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="contact.html" class="nav__link" data-active>Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+                    <span class="theme-toggle__icon light">☀️</span>
+                    <span class="theme-toggle__icon dark">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p class="lead">Get in touch to discuss your technology needs</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="grid" data-layout="2-col">
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <form class="form">
+                            <div class="form__group">
+                                <label for="name" class="form__label">Name</label>
+                                <input type="text" id="name" name="name" class="form__input" required>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="email" class="form__label">Email</label>
+                                <input type="email" id="email" name="email" class="form__input" required>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="company" class="form__label">Company</label>
+                                <input type="text" id="company" name="company" class="form__input">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="service" class="form__label">Service Interest</label>
+                                <select id="service" name="service" class="form__select">
+                                    <option value="">Select a service</option>
+                                    <option value="cloud">Cloud Solutions</option>
+                                    <option value="development">Custom Software Development</option>
+                                    <option value="security">Cybersecurity</option>
+                                    <option value="analytics">Data Analytics</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="message" class="form__label">Message</label>
+                                <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="button" data-variant="primary">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="stack">
+                            <div class="contact-info__item">
+                                <h3>Email</h3>
+                                <p>info@techvision.com</p>
+                                <p>support@techvision.com</p>
+                            </div>
+
+                            <div class="contact-info__item">
+                                <h3>Phone</h3>
+                                <p>Main: (555) 123-4567</p>
+                                <p>Support: (555) 123-4568</p>
+                            </div>
+
+                            <div class="contact-info__item">
+                                <h3>Address</h3>
+                                <p>123 Tech Boulevard</p>
+                                <p>San Francisco, CA 94102</p>
+                                <p>United States</p>
+                            </div>
+
+                            <div class="contact-info__item">
+                                <h3>Business Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                                <p>Saturday: 10:00 AM - 2:00 PM PST</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <div class="container">
+                <div class="map__placeholder">
+                    <img src="https://picsum.photos/1200/400?random=12" alt="Office Location Map">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid" data-layout="3-col">
+                <div class="footer__section">
+                    <h3 class="footer__title">TechVision Solutions</h3>
+                    <p class="footer__text">Innovative technology solutions for modern businesses.</p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Quick Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="services.html" class="footer__link">Services</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contact</h4>
+                    <p class="footer__text">Email: info@techvision.com</p>
+                    <p class="footer__text">Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 TechVision Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

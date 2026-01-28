@@ -1,0 +1,37 @@
+/* 
+ * Main CSS Entry Point
+ * 
+ * This file imports all CSS modules and organizes them into cascade layers.
+ * The order of layers determines specificity precedence.
+ * 
+ * DO NOT MODIFY THIS FILE
+ */
+
+ @layer reset, base, layouts, components, utilities;
+
+ @import 'base/reset.css' layer(reset);
+ 
+ @import 'base/variables.css' layer(base);
+ @import 'base/typography.css' layer(base);
+ 
+ @import 'layouts/container.css' layer(layouts);
+ @import 'layouts/grid.css' layer(layouts);
+ @import 'layouts/stack.css' layer(layouts);
+ 
+ @import 'components/header.css' layer(components);
+ @import 'components/nav.css' layer(components);
+ @import 'components/footer.css' layer(components);
+ @import 'components/button.css' layer(components);
+ @import 'components/card.css' layer(components);
+ @import 'components/form.css' layer(components);
+ 
+ @import 'utilities/utilities.css' layer(utilities);
+ 
+ /* Apply base styles to body */
+ body {
+     font-family: var(--font-family-body);
+     font-size: var(--font-size-base);
+     line-height: var(--line-height-base);
+     color: var(--text-clr);
+     background-color: var(--bg-clr);
+ }
