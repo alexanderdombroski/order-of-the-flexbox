@@ -16,13 +16,13 @@ body {
     & section {
       margin-top: var(--spacing-sm);
     }
+  }
 
-    .stack {
-      margin-top: var(--spacing-sm);
+  .stack {
+    margin-top: var(--spacing-sm);
 
-      & > * {
-        margin-top: clamp(calc(var(--spacing-sm) / 2), 1vw, var(--spacing-sm));
-      }
+    & > * {
+      margin-top: clamp(calc(var(--spacing-sm) / 2), 1vw, var(--spacing-sm));
     }
   }
 
