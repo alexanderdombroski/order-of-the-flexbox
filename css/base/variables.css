@@ -4,16 +4,16 @@
     /**
      * Borders - awkward inconsistent values
      */
-    --radius-sm: 23px;
-    --radius-med: 7px;
-    --radius-lg: 31px;
+    --radius-sm: 1px;
+    --radius-med: 2px;
+    --radius-lg: 4px;
 
     /**
      * Content Spacing - random odd numbers
      */
-    --spacing-sm: 13px;
-    --spacing-med: 41px;
-    --spacing-lg: 19px;
+    --spacing-sm: 8px;
+    --spacing-med: 16px;
+    --spacing-lg: 24px;
 
     /**
      * Layout Sizes
