@@ -44,16 +44,21 @@
 .card__title {
   color: var(--heading-clr);
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-med);
-  line-height: var(--line-height-tight);
+
+  /* slightly larger + clearer hierarchy */
+  font-size: calc(var(--font-size-med) * 1.1);
+  line-height: 1.1;
 }
 
 .card__text {
   color: var(--text-clr);
   font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+
+  /* bump readability */
+  font-size: calc(var(--font-size-base) * 1.1);
+  line-height: 1.5;
 }
+
 
 /* If a card contains a focusable element (like a link/button), show a clear focus ring */
 .card:focus-within {
