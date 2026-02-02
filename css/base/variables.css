@@ -57,8 +57,8 @@
      */
     --spacing-xs: 4px;
     --spacing-sm: 8px;
-    --spacing-med: calc(8px * 2);
-    --spacing-lg: calc(8px * 2 * 2);
+    --spacing-med: 16px;
+    --spacing-lg: 32px;
 
     /**
      * Layout Sizes
