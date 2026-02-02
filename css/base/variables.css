@@ -1,19 +1,64 @@
 @import 'colors.css';
 
+@font-face {
+    font-family: 'Lato-Regular';
+    /* A name you choose to refer to the font */
+    src:
+        url('../fonts/headings/Lato-Regular.woff2') format('woff2');
+    font-weight: 400;
+    /* Define the weight for this specific file */
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../fonts/headings/Lato-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville';
+    src:
+        url('../fonts/body/LibreBaskerville-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville-Bold';
+    src:
+        url('../fonts/body/LibreBaskerville-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Libre Baskerville-Italic';
+    src:
+        url('../fonts/body/LibreBaskerville-Italic.woff2') format('woff2');
+    font-weight: 400;
+}
+
+
+
 :root {
+    /**
+     * Rhythm Unit
+     */
+    --rhythm-base: 1.5rem;
+
+
     /**
      * Borders - awkward inconsistent values
      */
-    --radius-sm: 23px;
-    --radius-med: 7px;
-    --radius-lg: 31px;
+    --radius-sm: 1em;
+    --radius-med: 1.5em;
+    --radius-lg: 2em;
 
     /**
      * Content Spacing - random odd numbers
      */
-    --spacing-sm: 13px;
-    --spacing-med: 41px;
-    --spacing-lg: 19px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-med: calc(8px * 2);
+    --spacing-lg: calc(8px * 2 * 2);
 
     /**
      * Layout Sizes
@@ -21,25 +66,29 @@
     --content-max-width: 1200px;
     --breakout-max-width: calc(var(--content-max-width) + (var(--spacing-lg) * 2));
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
-     
+
     /**
      * Typography - poor font choices and awkward sizing
      */
-    --font-family-heading: 'Impact', sans-serif;
-    --font-family-body: 'Arial', sans-serif;
+    --font-family-heading: 'Lato-Bold', sans-serif;
+    --font-family-body: 'Libre Baskerville', serif;
     --font-family-mono: 'Courier New', monospace;
-    
-    --font-size-xs: 0.7rem;
-    --font-size-sm: 1.3rem;
-    --font-size-base: 1.1rem;
-    --font-size-med: 2.7rem;
-    --font-size-lg: 3.9rem;
-    --font-size-xl: 5.2rem;
-    
-    --line-height-tight: 0.9;
-    --line-height-base: 1.3;
-    --line-height-loose: 2.8;
-    
+
+    --font-size-base: 1em;
+    --scale-ratio: 1.25;
+    --font-size-xs: calc(var(--font-size-base) / var(--scale-ratio) / var(--scale-ratio));
+    --font-size-sm: calc(var(--font-size-base) / var(--scale-ratio));
+    --font-size-md: var(--font-size-base);
+    --font-size-lg: calc(var(--font-size-base) * var(--scale-ratio));
+    --font-size-xl: calc(var(--font-size-base) * var(--scale-ratio) * var(--scale-ratio));
+    --font-size-2xl: calc(var(--font-size-base) * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio));
+    --font-size-large-display: calc(var(--font-size-2xl) * var(--scale-ratio));
+    /*--font-size-large-display: calc(var(--font-size-2xl) * var(--scale-ratio) * var(--scale-ratio));*/
+
+    --line-height-tight: calc(var(--rhythm-base) * 1);
+    --line-height-base: calc(var(--rhythm-base) * 2);
+    --line-height-loose: calc(var(--rhythm-base) * 3);
+
     --font-weight-normal: 400;
     --font-weight-bold: 900;
 }
