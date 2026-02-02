@@ -11,6 +11,7 @@
 
 .header {
   box-shadow: 0px 0px 10px grey;
+  width: 100%;
 
   .header__content {
     display: flex;
@@ -25,24 +26,24 @@
     justify-items: center;
   }
 
-  :is(button) {
+  .theme-toggle {
     border: none;
     /* background-color: rgb(85, 85, 85); */
-    background-color: inherit;
-    box-shadow: 0 0 6px grey;
+    background-color: color-mix(in srgb, var(--bg-clr) 70%, black);
     width: fit-content;
     padding: 7px;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     justify-self: center;
-
-    :hover {
-      transform: scale(1.5);
-    }
-  }
-  .header__branding,
-  nav, .theme-toggle {
     margin: 10px 0;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-toggle__icon {
+      padding: 0 7px;
+    }
   }
 }
 

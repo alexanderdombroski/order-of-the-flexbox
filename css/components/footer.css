@@ -9,25 +9,36 @@
  * - Responsive behavior
  */
 
-footer :is(.container) {
-  box-shadow: 0px 0px 10px grey;
+footer {
+  width: 100%;
 
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  :is(.container) {
+    box-shadow: 0px 0px 10px grey;
 
-
-    :is(.footer__section) {
-      padding: 40px 0 40px 30%;
-    }
-    a:hover{
+    .grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      :is(.footer__section) {
+        justify-items: center;
+      }
+      a:hover {
         font-weight: bolder;
+      }
+    }
+
+    .footer__bottom {
+      justify-items: center;
+      padding: 15px;
     }
   }
+}
 
-  .footer__bottom {
-    justify-items: center;
-    padding: 15px;
-
+@media screen and (min-width: 48rem) {
+  footer {
+    :is(.container .grid) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
