@@ -55,10 +55,10 @@
     /**
      * Content Spacing - random odd numbers
      */
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-med: 16px;
-    --spacing-lg: 32px;
+    --spacing-sm: 0px;
+    --spacing-med: 10px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
 
     /**
      * Layout Sizes
