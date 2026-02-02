@@ -10,7 +10,7 @@
 body {
   min-height: 100vh;
 
-  .container {
+  & .container {
     max-width: var(--content-max-width);
     padding-inline: clamp(
       calc(var(--breakout-size) / 2),
@@ -19,7 +19,7 @@ body {
     );
   }
 
-  & > * {
+  & > *:not(header, footer) {
     max-width: var(--breakout-max-width);
     margin-inline: auto;
   }
