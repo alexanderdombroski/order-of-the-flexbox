@@ -45,7 +45,7 @@
   color: var(--heading-clr);
   font-family: var(--font-family-heading);
 
-  /* slightly larger + clearer hierarchy */
+  /* slightly larger + clearer hierarchy by request during class*/
   font-size: calc(var(--font-size-med) * 1.1);
   line-height: 1.1;
 }
@@ -54,7 +54,7 @@
   color: var(--text-clr);
   font-family: var(--font-family-body);
 
-  /* bump readability */
+  /* bump readability, this was requested during class */
   font-size: calc(var(--font-size-base) * 1.1);
   line-height: 1.5;
 }
