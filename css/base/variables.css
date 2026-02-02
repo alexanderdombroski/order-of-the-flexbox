@@ -85,9 +85,9 @@
     --font-size-large-display: calc(var(--font-size-2xl) * var(--scale-ratio));
     /*--font-size-large-display: calc(var(--font-size-2xl) * var(--scale-ratio) * var(--scale-ratio));*/
 
-    --line-height-tight: calc(var(--rhythm-base) * 1);
-    --line-height-base: calc(var(--rhythm-base) * 2);
-    --line-height-loose: calc(var(--rhythm-base) * 3);
+    --line-height-tight: calc(var(--rhythm-base) * 0.5);
+    --line-height-base: calc(var(--rhythm-base) * 1.5);
+    --line-height-loose: calc(var(--rhythm-base) * 2.5);
 
     --font-weight-normal: 400;
     --font-weight-bold: 900;
