@@ -1,9 +1,36 @@
 /* 
  * Grid Composition
  * 
- * TODO: Create responsive grid system that:
  * - Handles multi-column layouts
  * - Uses CSS Grid
  * - Works across different screen sizes
  * - Provides consistent gaps
  */
+
+.grid {
+  display: grid;
+  gap: clamp(var(--spacing-sm), 1vw, var(--spacing-lg)) var(--spacing-lg);
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .grid {
+    &[data-layout="2-col"],
+    &[data-layout="3-col"],
+    &[data-layout="4-col"] {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .grid {
+    &[data-layout="3-col"] {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    &[data-layout="4-col"] {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
