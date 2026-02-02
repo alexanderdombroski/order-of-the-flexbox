@@ -1,9 +1,101 @@
 /* 
  * Button Component
- * 
- * TODO: Style buttons including:
- * - Base button styles
- * - Button variants (primary, secondary, etc.)
- * - Hover, focus, and active states
- * - Accessibility (focus indicators)
+ * - Base .button styles for <a> and <button>
+ * - Variants via [data-variant="primary|secondary"]
+ * - Hover, focus-visible, active
+ * - Accessible focus indicators
  */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing-sm) / 3);
+
+  padding: calc(var(--spacing-sm) / 1.6) calc(var(--spacing-lg) / 1.25);
+  border-radius: var(--radius-med);
+
+  border: 2px solid transparent;
+  background: var(--button-bg-clr);
+  color: var(--button-text-clr);
+
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+
+  box-shadow: 0 6px 16px color-mix(in oklab, var(--border-clr), transparent 70%);
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+
+/* keep anchors consistent */
+.button:visited {
+  color: var(--button-text-clr);
+}
+
+/* Variants used in your HTML */
+.button[data-variant="primary"] {
+  background: var(--primary-clr);
+  color: var(--button-text-clr);
+  border-color: color-mix(in oklab, var(--primary-clr), var(--border-clr) 25%);
+}
+
+.button[data-variant="secondary"] {
+  background: var(--secondary-clr);
+  color: color-mix(in oklab, var(--text-clr), black 40%);
+  border-color: color-mix(in oklab, var(--secondary-clr), var(--border-clr) 25%);
+}
+
+/* States */
+.button:hover {
+  background: var(--button-hover-bg-clr);
+  border-color: color-mix(in oklab, var(--border-clr), transparent 20%);
+  box-shadow: 0 10px 22px color-mix(in oklab, var(--border-clr), transparent 60%);
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px color-mix(in oklab, var(--border-clr), transparent 65%);
+}
+
+/* Accessible focus */
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--accent-clr), white 20%);
+  outline-offset: 3px;
+}
+
+/* Disabled (future-proof) */
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Optional: full width (useful in forms if you decide to) */
+.button[data-fullwidth="true"] {
+  width: 100%;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+  .button:hover,
+  .button:active {
+    transform: none;
+  }
+}
