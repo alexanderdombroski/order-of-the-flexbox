@@ -1,9 +1,26 @@
 /* 
  * Container Composition
  * 
- * TODO: Create container layout that:
  * - Centers content
  * - Manages max-width
  * - Provides consistent padding
  * - Works responsively
  */
+
+body {
+  min-height: 100vh;
+
+  .container {
+    max-width: var(--content-max-width);
+    padding-inline: clamp(
+      calc(var(--breakout-size) / 2),
+      2vw,
+      var(--breakout-size)
+    );
+  }
+
+  & > * {
+    max-width: var(--breakout-max-width);
+    margin-inline: auto;
+  }
+}
