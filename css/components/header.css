@@ -12,6 +12,8 @@
 .header {
   box-shadow: 0px 0px 10px grey;
   width: 100%;
+  background-color: var(--header-bg-clr);
+  color: var(--header-text-clr);
 
   .header__content {
     display: flex;
@@ -20,7 +22,7 @@
     align-items: center;
     margin: 0 3rem;
     padding: 2rem 0;
-    justify-items: space-between;
+    gap: var(--spacing-med);
   }
   .header__branding {
     justify-items: center;
@@ -28,8 +30,7 @@
 
   .theme-toggle {
     border: none;
-    /* background-color: rgb(85, 85, 85); */
-    background-color: color-mix(in srgb, var(--bg-clr) 70%, black);
+    background-color: color-mix(in srgb, var(--header-bg-clr) 90%, white);
     width: fit-content;
     padding: 7px;
     border-radius: 20px;

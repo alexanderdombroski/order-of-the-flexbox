@@ -1,9 +1,79 @@
 /* 
  * Card Component
- * 
- * TODO: Style cards including:
- * - Card container styles
- * - Content layout within cards
- * - Image handling
- * - Hover effects
+ * - .card container
+ * - Image handling (.card__image)
+ * - Content layout (.card__content)
+ * - Hover + focus-within polish
  */
+
+.card {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+
+  /* softens loud variables without changing them */
+  background: color-mix(in oklab, var(--card-bg-clr), var(--bg-clr) 65%);
+  border: 2px solid color-mix(in oklab, var(--card-border-clr), transparent 30%);
+
+  box-shadow: 0 10px 26px color-mix(in oklab, var(--border-clr), transparent 75%);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+
+  min-width: 0;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px color-mix(in oklab, var(--border-clr), transparent 65%);
+  border-color: color-mix(in oklab, var(--card-border-clr), var(--accent-clr) 20%);
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: var(--spacing-sm);
+  display: grid;
+  gap: calc(var(--spacing-sm) / 2);
+}
+
+.card__title {
+  color: var(--heading-clr);
+  font-family: var(--font-family-heading);
+
+  /* slightly larger + clearer hierarchy by request during class*/
+  font-size: calc(var(--font-size-med) * 1.1);
+  line-height: 1.1;
+}
+
+.card__text {
+  color: var(--text-clr);
+  font-family: var(--font-family-body);
+
+  /* bump readability, this was requested during class */
+  font-size: calc(var(--font-size-base) * 1.1);
+  line-height: 1.5;
+}
+
+
+/* If a card contains a focusable element (like a link/button), show a clear focus ring */
+.card:focus-within {
+  border-color: color-mix(in oklab, var(--accent-clr), var(--card-border-clr) 40%);
+  box-shadow:
+    0 0 0 4px color-mix(in oklab, var(--accent-clr), transparent 70%),
+    0 16px 34px color-mix(in oklab, var(--border-clr), transparent 65%);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+}

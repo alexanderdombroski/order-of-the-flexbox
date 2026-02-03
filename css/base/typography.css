@@ -1,3 +1,4 @@
+@import 'variables.css';
 /* 
  * Typography System
  * 
@@ -8,3 +9,88 @@
  * - Link styles
  * - Inline elements (strong, em, code)
  */
+
+body {
+    margin: var(--spacing-lg);
+}
+
+
+:where(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-family-heading);
+    line-height: var(--line-height-base);
+    /* Set Spacing */
+}
+
+h1 {
+    font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-large-display));
+}
+
+h2,
+h3 {
+    font-size: clamp(var(--font-size-lg), 3vw, var(--font-size-xl));
+}
+
+h4,
+h5,
+h6 {
+    font-size: clamp(var(--font-size-md), 2vw, var(--font-size-lg));
+}
+
+:where(a, p) {
+    font-size: clamp(var(--font-size-md), 1.5vw, var(--font-size-lg));
+}
+
+a {
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.15em;
+}
+
+p {
+    font-family: var(--font-family-body);
+    line-height: var(--line-height-base);
+    max-width: 65ch;
+}
+
+strong {
+    font-weight: var(--font-weight-bold);
+}
+
+em {
+    font-style: italic;
+}
+
+.stack>*+* {
+    margin-top: var(--spacing-xs);
+}
+
+.card__content>*+*,
+.footer__section>*+* {
+    margin-top: var(--spacing-sm);
+}
+
+
+/*  Create classes for different text styles (lead text, small text, etc.)
+Style inline elements like links, strong, em, and code */
+/*
+.text-lead {
+    font-size: clamp(var(--font-size-md), 1.5vw, var(--font-size-lg));
+    line-height: var(--line-height-loose);
+    font-weight: var(--font-weight-normal);
+}
+
+.text-small {
+    font-size: clamp(var(--font-size-xs), 1.5vw, var(--font-size-sm));
+}
+
+.text-muted {
+    opacity: 0.75;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.text-center {
+    text-align: center;
+}*/
