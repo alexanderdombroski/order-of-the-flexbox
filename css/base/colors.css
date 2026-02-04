@@ -8,8 +8,8 @@ html {
   --secondary-clr: #0f172a; /* dark slate for secondary button bg */
   --accent-clr: #1f6ae1; /* same as primary for consistency */
 
-    --link-clr: #F5F7FA;
-    --link-hover-clr: #174FB8;     /* darker blue hover */
+  --link-clr: #f5f7fa;
+  --link-hover-clr: #174fb8; /* darker blue hover */
 
   --border-clr: #e5e7eb;
 
@@ -26,7 +26,8 @@ html {
   --card-bg-clr: #ffffff;
   --card-border-clr: #e5e7eb;
 
-  & .dark {
+  /* Changes emoji to dark */
+  & .light {
     display: none;
   }
 
@@ -62,7 +63,7 @@ html {
     }
 
     & .light {
-      /* display: none; */
+      display: none;
     }
   }
 
@@ -95,12 +96,15 @@ html {
 
       --card-bg-clr: #111827;
       --card-border-clr: #1f2933;
-      & .dark {
+
+      /* changes emoji back to light */
+      & .light {
         display: initial;
       }
 
-      & .light {
-        /* display: none; */
+      /* hides dark emoji */
+      & .dark {
+        display: none;
       }
     }
   }
