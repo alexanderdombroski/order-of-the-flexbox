@@ -36,7 +36,6 @@
   padding: var(--spacing-lg);
 }
 
-/* Slightly larger than global defaults */
 .card__title {
   color: var(--heading-clr);
   font-family: var(--font-family-heading);
@@ -51,7 +50,6 @@
   line-height: calc(var(--rhythm-base) * 1.8);
 }
 
-/* If the card contains a focusable thing, show a clear ring */
 .card:focus-within {
   border-color: color-mix(in oklab, var(--accent-clr), var(--card-border-clr) 35%);
   box-shadow:
