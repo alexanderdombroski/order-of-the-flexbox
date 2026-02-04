@@ -55,10 +55,11 @@
     /**
      * Content Spacing - random odd numbers
      */
-    --spacing-sm: 0px;
-    --spacing-med: 10px;
-    --spacing-lg: 20px;
-    --spacing-xl: 30px;
+    --spacing-sm: 8px;
+    --spacing-med: 15px;
+    --spacing-lg: 30px;
+    --spacing-xl: 60px;
+    --spacing-xxl: 120px;
 
     /**
      * Layout Sizes
@@ -85,9 +86,9 @@
     --font-size-large-display: calc(var(--font-size-2xl) * var(--scale-ratio));
     /*--font-size-large-display: calc(var(--font-size-2xl) * var(--scale-ratio) * var(--scale-ratio));*/
 
-    --line-height-tight: calc(var(--rhythm-base) * 0.5);
-    --line-height-base: calc(var(--rhythm-base) * 1.5);
-    --line-height-loose: calc(var(--rhythm-base) * 2.5);
+    --line-height-tight: calc(var(--rhythm-base) * 1);
+    --line-height-base: calc(var(--rhythm-base) * 2);
+    --line-height-loose: calc(var(--rhythm-base) * 3);
 
     --font-weight-normal: 400;
     --font-weight-bold: 900;
