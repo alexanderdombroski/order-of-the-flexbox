@@ -18,6 +18,7 @@
   .nav__link {
     padding: 10px;
     border-radius: 70px;
+    color: var(--link-clr);
 
     &:hover {
       font-weight: bolder;
