@@ -14,7 +14,11 @@ body {
     margin-top: clamp(var(--spacing-sm), 2vw, var(--spacing-med));
 
     & section {
-      margin-top: var(--spacing-sm);
+      margin-top: var(--spacing-lg);
+
+      & h2 {
+        margin-bottom: var(--spacing-sm);
+      }
     }
   }
 
@@ -23,6 +27,10 @@ body {
 
     & > * {
       margin-top: clamp(calc(var(--spacing-sm) / 2), 1vw, var(--spacing-sm));
+    }
+    
+    & .content-block {
+      margin-top: var(--spacing-med);
     }
   }
 
