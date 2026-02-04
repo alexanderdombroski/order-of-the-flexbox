@@ -1,5 +1,6 @@
 /* 
  * Footer Component
+ * Footer Component - Lily Sorensen
  * 
  * TODO: Style footer including:
  * - Layout and spacing
@@ -7,3 +8,44 @@
  * - Link styles
  * - Responsive behavior
  */
+
+footer {
+  width: 100%;
+  background-color: var(--footer-bg-clr);
+  color: var(--footer-text-clr);
+
+  :is(.container) {
+    /* box-shadow: 0px 0px 10px grey; */
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+      padding: var(--spacing-xl);
+      :is(.footer__section) {
+        justify-items: center;
+      }
+      a {
+        color: var(--link-hover-clr);
+      }
+      a:hover {
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+    }
+
+    .footer__bottom {
+      justify-items: center;
+      padding: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  footer {
+    :is(.container .grid) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

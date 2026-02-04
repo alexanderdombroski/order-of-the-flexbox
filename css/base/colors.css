@@ -63,10 +63,10 @@ html {
         --card-border-clr: #1F2933;
     }
 
-        & .light {
-            display: none;
-        }
+    & .light {
+      /* display: none; */
     }
+  }
 
     /* Repeat dark theme variables */
     @media (prefers-color-scheme: dark) {
@@ -101,9 +101,9 @@ html {
                 display: initial;
             }
 
-            & .light {
-                display: none;
-            }
-        }
+      & .light {
+        /* display: none; */
+      }
     }
+  }
 }

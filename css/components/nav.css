@@ -7,3 +7,33 @@
  * - Active page indication
  * - Mobile responsive menu
  */
+
+.nav .nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--spacing-med);
+
+  .nav__link {
+    padding: 10px;
+    border-radius: 70px;
+    color: var(--link-clr);
+
+    &:hover {
+      font-weight: bolder;
+      color: var(--link-hover-clr);
+    }
+    &:active {
+      outline: 2px solid #667eea;
+      outline-offset: 2px;
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .nav .nav__list {
+    display: flex;
+    flex-direction: row;
+  }
+}

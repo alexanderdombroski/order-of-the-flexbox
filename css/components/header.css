@@ -1,5 +1,6 @@
 /* 
  * Header Component
+ * Header Component - Lily Sorensen
  * 
  * TODO: Style header including:
  * - Layout and positioning
@@ -7,3 +8,50 @@
  * - Theme toggle button
  * - Responsive behavior
  */
+
+.header {
+  /* box-shadow: 0px 0px 10px grey; */
+  width: 100%;
+  background-color: var(--header-bg-clr);
+  color: var(--header-text-clr);
+
+  .header__content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    margin: 0 3rem;
+    padding: 2rem 0;
+    gap: var(--spacing-med);
+  }
+  .header__branding {
+    justify-items: center;
+  }
+
+  .theme-toggle {
+    border: none;
+    background-color: color-mix(in srgb, var(--header-bg-clr) 90%, white);
+    width: fit-content;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    justify-self: center;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-toggle__icon {
+      padding: 0 7px;
+    }
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .header .header__content {
+    display: grid;
+    grid-template-columns: 2fr 6fr 1fr;
+    height: 10rem;
+  }
+}
