@@ -71,15 +71,16 @@ em {
 
 /*  Create classes for different text styles (lead text, small text, etc.)
 Style inline elements like links, strong, em, and code */
-/*
+
+
 .text-lead {
-    font-size: clamp(var(--font-size-md), 1.5vw, var(--font-size-lg));
+    font-size: var(--font-size-lg);
     line-height: var(--line-height-loose);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-bold);
 }
 
 .text-small {
-    font-size: clamp(var(--font-size-xs), 1.5vw, var(--font-size-sm));
+    font-size: var(--font-size-sm);
 }
 
 .text-muted {
@@ -90,7 +91,3 @@ Style inline elements like links, strong, em, and code */
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
-
-.text-center {
-    text-align: center;
-}*/
