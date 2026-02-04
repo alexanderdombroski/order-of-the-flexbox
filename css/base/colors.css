@@ -8,8 +8,8 @@ html {
   --secondary-clr: #0f172a; /* dark slate for secondary button bg */
   --accent-clr: #1f6ae1; /* same as primary for consistency */
 
-  --link-clr: #1f6ae1;
-  --link-hover-clr: #174fb8; /* darker blue hover */
+    --link-clr: #F5F7FA;
+    --link-hover-clr: #174FB8;     /* darker blue hover */
 
   --border-clr: #e5e7eb;
 

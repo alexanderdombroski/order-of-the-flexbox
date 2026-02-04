@@ -10,11 +10,10 @@
   overflow: hidden;
   border-radius: var(--radius-lg);
 
-  /* softens loud variables without changing them */
-  background: color-mix(in oklab, var(--card-bg-clr), var(--bg-clr) 65%);
-  border: 2px solid color-mix(in oklab, var(--card-border-clr), transparent 30%);
+  background: var(--card-bg-clr);
+  border: 1px solid var(--card-border-clr);
 
-  box-shadow: 0 10px 26px color-mix(in oklab, var(--border-clr), transparent 75%);
+  box-shadow: 0 10px 28px color-mix(in oklab, var(--border-clr), transparent 55%);
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 
   min-width: 0;
@@ -22,53 +21,42 @@
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 34px color-mix(in oklab, var(--border-clr), transparent 65%);
-  border-color: color-mix(in oklab, var(--card-border-clr), var(--accent-clr) 20%);
+  border-color: color-mix(in oklab, var(--accent-clr), var(--card-border-clr) 60%);
+  box-shadow: 0 16px 40px color-mix(in oklab, var(--border-clr), transparent 45%);
 }
 
 .card__image {
   width: 100%;
-  height: auto;
   display: block;
-
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
 .card__content {
-  padding: var(--spacing-sm);
-  display: grid;
-  gap: calc(var(--spacing-sm) / 2);
+  padding: var(--spacing-lg);
 }
 
 .card__title {
   color: var(--heading-clr);
   font-family: var(--font-family-heading);
-
-  /* slightly larger + clearer hierarchy by request during class*/
-  font-size: calc(var(--font-size-med) * 1.1);
-  line-height: 1.1;
+  font-size: clamp(var(--font-size-xl), 2vw, var(--font-size-2xl));
+  line-height: 1.15;
 }
 
 .card__text {
   color: var(--text-clr);
   font-family: var(--font-family-body);
-
-  /* bump readability, this was requested during class */
-  font-size: calc(var(--font-size-base) * 1.1);
-  line-height: 1.5;
+  font-size: clamp(calc(var(--font-size-md) * 1.05), 1.2vw, calc(var(--font-size-lg) * 1.05));
+  line-height: calc(var(--rhythm-base) * 1.8);
 }
 
-
-/* If a card contains a focusable element (like a link/button), show a clear focus ring */
 .card:focus-within {
-  border-color: color-mix(in oklab, var(--accent-clr), var(--card-border-clr) 40%);
+  border-color: color-mix(in oklab, var(--accent-clr), var(--card-border-clr) 35%);
   box-shadow:
-    0 0 0 4px color-mix(in oklab, var(--accent-clr), transparent 70%),
-    0 16px 34px color-mix(in oklab, var(--border-clr), transparent 65%);
+    0 0 0 4px color-mix(in oklab, var(--accent-clr), transparent 75%),
+    0 16px 40px color-mix(in oklab, var(--border-clr), transparent 45%);
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .card {
     transition: none;

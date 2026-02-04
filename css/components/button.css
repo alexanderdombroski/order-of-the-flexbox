@@ -10,18 +10,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: calc(var(--spacing-sm) / 3);
+  gap: var(--spacing-sm);
 
-  padding: calc(var(--spacing-sm) / 1.6) calc(var(--spacing-lg) / 1.25);
+  padding: calc(var(--spacing-sm) * 1.5) calc(var(--spacing-lg));
   border-radius: var(--radius-med);
 
-  border: 2px solid transparent;
+  border: 1px solid var(--border-clr);
   background: var(--button-bg-clr);
   color: var(--button-text-clr);
 
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
   line-height: 1;
 
   cursor: pointer;
@@ -29,67 +28,62 @@
   text-align: center;
   white-space: nowrap;
 
-  box-shadow: 0 6px 16px color-mix(in oklab, var(--border-clr), transparent 70%);
-  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease, border-color 140ms ease;
+  box-shadow: 0 8px 20px color-mix(in oklab, var(--border-clr), transparent 60%);
+  transition: background-color 140ms ease, transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
 }
 
-/* keep anchors consistent */
 .button:visited {
   color: var(--button-text-clr);
 }
 
-/* Variants used in your HTML */
 .button[data-variant="primary"] {
   background: var(--primary-clr);
   color: var(--button-text-clr);
-  border-color: color-mix(in oklab, var(--primary-clr), var(--border-clr) 25%);
+  border-color: color-mix(in oklab, var(--primary-clr), var(--border-clr) 45%);
 }
 
 .button[data-variant="secondary"] {
   background: var(--secondary-clr);
-  color: color-mix(in oklab, var(--text-clr), black 40%);
-  border-color: color-mix(in oklab, var(--secondary-clr), var(--border-clr) 25%);
+  color: var(--bg-clr);
+  border-color: color-mix(in oklab, var(--secondary-clr), var(--border-clr) 45%);
 }
 
-/* States */
-.button:hover {
+/* Hover uses the token hover color, but only for primary style */
+.button[data-variant="primary"]:hover {
   background: var(--button-hover-bg-clr);
-  border-color: color-mix(in oklab, var(--border-clr), transparent 20%);
-  box-shadow: 0 10px 22px color-mix(in oklab, var(--border-clr), transparent 60%);
   transform: translateY(-1px);
+  box-shadow: 0 12px 28px color-mix(in oklab, var(--border-clr), transparent 50%);
+}
+
+.button[data-variant="secondary"]:hover {
+  border-color: color-mix(in oklab, var(--accent-clr), var(--border-clr) 40%);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px color-mix(in oklab, var(--border-clr), transparent 50%);
 }
 
 .button:active {
   transform: translateY(0);
-  box-shadow: 0 6px 16px color-mix(in oklab, var(--border-clr), transparent 65%);
+  box-shadow: 0 8px 20px color-mix(in oklab, var(--border-clr), transparent 60%);
 }
 
-/* Accessible focus */
 .button:focus {
   outline: none;
 }
 
 .button:focus-visible {
-  outline: 3px solid color-mix(in oklab, var(--accent-clr), white 20%);
+  outline: 3px solid color-mix(in oklab, var(--accent-clr), white 15%);
   outline-offset: 3px;
 }
 
-/* Disabled (future-proof) */
 .button:disabled,
 .button[aria-disabled="true"] {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: not-allowed;
   pointer-events: none;
   transform: none;
   box-shadow: none;
 }
 
-/* Optional: full width (useful in forms if you decide to) */
-.button[data-fullwidth="true"] {
-  width: 100%;
-}
-
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .button {
     transition: none;
