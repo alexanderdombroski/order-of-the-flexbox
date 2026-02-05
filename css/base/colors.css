@@ -63,37 +63,37 @@ html {
     & .dark {
       display: none;
     }
+  }
 
-    &:not(.light) {
-      /* Repeat dark theme variables */
-      @media (prefers-color-scheme: dark) {
-        /* Repeat Dark theme variables */
-        --bg-clr: #0e182c;
-        --text-clr: #e5e7eb;
-        --heading-clr: #f9fafb;
+  &:not(.light) {
+    /* Repeat dark theme variables */
+    @media (prefers-color-scheme: dark) {
+      /* Repeat Dark theme variables */
+      --bg-clr: #0e182c;
+      --text-clr: #e5e7eb;
+      --heading-clr: #f9fafb;
 
-        --primary-clr: #2563eb; /* brighter blue for dark backgrounds */
-        --secondary-clr: #f1f5f9; /* light slate for secondary button in dark mode */
-        --accent-clr: #2563eb;
+      --primary-clr: #2563eb; /* brighter blue for dark backgrounds */
+      --secondary-clr: #f1f5f9; /* light slate for secondary button in dark mode */
+      --accent-clr: #2563eb;
 
-        --link-clr: #f1f5f9;
-        --link-hover-clr: #759ef5;
+      --link-clr: #f1f5f9;
+      --link-hover-clr: #759ef5;
 
-        --border-clr: #1f2933;
+      --border-clr: #1f2933;
 
-        --header-bg-clr: #020617;
-        --header-text-clr: #e5e7eb;
+      --header-bg-clr: #020617;
+      --header-text-clr: #e5e7eb;
 
-        --footer-bg-clr: #020617;
-        --footer-text-clr: #e5e7eb;
+      --footer-bg-clr: #020617;
+      --footer-text-clr: #e5e7eb;
 
-        --button-bg-clr: #2563eb;
-        --button-text-clr: #ffffff;
-        --button-hover-bg-clr: #1450d2;
+      --button-bg-clr: #2563eb;
+      --button-text-clr: #ffffff;
+      --button-hover-bg-clr: #1450d2;
 
-        --card-bg-clr: #111827;
-        --card-border-clr: #1f2933;
-      }
+      --card-bg-clr: #111827;
+      --card-border-clr: #1f2933;
     }
   }
 }
