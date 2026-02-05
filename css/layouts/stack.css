@@ -11,18 +11,27 @@ body {
   flex-direction: column;
 
   & main {
-    margin-top: clamp(var(--spacing-sm), 2vw, var(--spacing-med));
+    margin-block: clamp(var(--spacing-sm), 2vw, var(--spacing-med));
 
     & section {
-      margin-top: var(--spacing-sm);
+      margin-block: var(--spacing-lg);
+
+      & h2 {
+        margin-block: var(--spacing-sm);
+      }
     }
   }
 
-  .stack {
-    margin-top: var(--spacing-sm);
 
-    & > * {
-      margin-top: clamp(calc(var(--spacing-sm) / 2), 1vw, var(--spacing-sm));
+  .stack {
+    margin-block: var(--spacing-xl);
+
+    &>* {
+      margin-block: clamp(calc(var(--spacing-sm) / 2), 1vw, var(--spacing-sm));
+    }
+
+    & .content-block {
+      margin-block: var(--spacing-lg);
     }
   }
 

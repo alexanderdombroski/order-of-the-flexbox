@@ -12,15 +12,15 @@
   justify-content: center;
   gap: var(--spacing-sm);
 
-  padding: calc(var(--spacing-sm) * 1.5) calc(var(--spacing-lg));
+  padding: calc(var(--spacing-sm) * 1.25) calc(var(--spacing-lg) * 0.9);
   border-radius: var(--radius-med);
 
-  border: 1px solid var(--border-clr);
+  border: 1px solid color-mix(in oklab, var(--border-clr), black 8%);
   background: var(--button-bg-clr);
   color: var(--button-text-clr);
 
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   line-height: 1;
 
   cursor: pointer;
@@ -28,8 +28,8 @@
   text-align: center;
   white-space: nowrap;
 
-  box-shadow: 0 8px 20px color-mix(in oklab, var(--border-clr), transparent 60%);
-  transition: background-color 140ms ease, transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+  box-shadow: 0 10px 24px color-mix(in oklab, var(--border-clr), transparent 40%);
+  transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .button:visited {
@@ -39,51 +39,55 @@
 .button[data-variant="primary"] {
   background: var(--primary-clr);
   color: var(--button-text-clr);
-  border-color: color-mix(in oklab, var(--primary-clr), var(--border-clr) 45%);
+  border-color: color-mix(in oklab, var(--primary-clr), black 10%);
 }
 
 .button[data-variant="secondary"] {
   background: var(--secondary-clr);
   color: var(--bg-clr);
-  border-color: color-mix(in oklab, var(--secondary-clr), var(--border-clr) 45%);
+  border-color: color-mix(in oklab, var(--secondary-clr), black 10%);
 }
 
-/* Hover uses the token hover color, but only for primary style */
+/* Hover and active */
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px color-mix(in oklab, var(--border-clr), transparent 30%);
+}
+
 .button[data-variant="primary"]:hover {
   background: var(--button-hover-bg-clr);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 28px color-mix(in oklab, var(--border-clr), transparent 50%);
 }
 
 .button[data-variant="secondary"]:hover {
   border-color: color-mix(in oklab, var(--accent-clr), var(--border-clr) 40%);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 28px color-mix(in oklab, var(--border-clr), transparent 50%);
 }
 
 .button:active {
   transform: translateY(0);
-  box-shadow: 0 8px 20px color-mix(in oklab, var(--border-clr), transparent 60%);
+  box-shadow: 0 10px 24px color-mix(in oklab, var(--border-clr), transparent 40%);
 }
 
+/* Accessible focus */
 .button:focus {
   outline: none;
 }
 
 .button:focus-visible {
-  outline: 3px solid color-mix(in oklab, var(--accent-clr), white 15%);
+  outline: 3px solid color-mix(in oklab, var(--accent-clr), white 20%);
   outline-offset: 3px;
 }
 
+/* Disabled support */
 .button:disabled,
 .button[aria-disabled="true"] {
-  opacity: 0.55;
+  opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
   transform: none;
   box-shadow: none;
 }
 
+/* Motion respect */
 @media (prefers-reduced-motion: reduce) {
   .button {
     transition: none;

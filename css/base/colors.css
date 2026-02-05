@@ -1,71 +1,69 @@
 html {
-    /* Light (base) theme variables - much better */
-    --bg-clr: #F5F7FA;
-    --text-clr: #0B1C2D;
-    --heading-clr: #111827;
+  /* Light (base) theme variables - much better */
+  --bg-clr: #f5f7fa;
+  --text-clr: #0b1c2d;
+  --heading-clr: #111827;
 
-    --primary-clr: #1F6AE1;        /* strong blue */
-    --secondary-clr: #0F172A;      /* dark slate for secondary button bg */
-    --accent-clr: #1F6AE1;         /* same as primary for consistency */
+  --primary-clr: #1f6ae1; /* strong blue */
+  --secondary-clr: #0f172a; /* dark slate for secondary button bg */
+  --accent-clr: #1f6ae1; /* same as primary for consistency */
 
     --link-clr: #F5F7FA;
     --link-hover-clr: #89ADF0;     /* darker blue hover */
 
-    --border-clr: #E5E7EB;
+  --border-clr: #e5e7eb;
 
-    --header-bg-clr: #0B1C2D;
-    --header-text-clr: #F5F7FA;
+  --header-bg-clr: #0b1c2d;
+  --header-text-clr: #f5f7fa;
 
-    --footer-bg-clr: #0B1C2D;
-    --footer-text-clr: #F5F7FA;
+  --footer-bg-clr: #0b1c2d;
+  --footer-text-clr: #f5f7fa;
 
-    --button-bg-clr: #1F6AE1;
-    --button-text-clr: #FFFFFF;
-    --button-hover-bg-clr: #174FB8;
+  --button-bg-clr: #1f6ae1;
+  --button-text-clr: #ffffff;
+  --button-hover-bg-clr: #174fb8;
 
-    --card-bg-clr: #FFFFFF;
-    --card-border-clr: #E5E7EB;
+  --card-bg-clr: #ffffff;
+  --card-border-clr: #e5e7eb;
 
-    
-    & .light {
-        display: none;
-    }
+  /* Changes emoji to dark */
+  & .light {
+    display: none;
+  }
 
-    /* Override with dark theme variables */
-    &.dark {
-        /* Dark theme variables - colors changed */
-        [data-theme="dark"] {
-  
-        --bg-clr: #0e182b;
-        --text-clr: #E5E7EB;
-        --heading-clr: #F9FAFB;
+  /* Override with dark theme variables */
+  &.dark {
+    /* Dark theme variables - colors changed */
+    [data-theme="dark"] {
+      --bg-clr: #0e182b;
+      --text-clr: #e5e7eb;
+      --heading-clr: #f9fafb;
 
-        --primary-clr: #2563EB;        /* brighter blue for dark backgrounds */
-        --secondary-clr: #F1F5F9;      /* light slate for secondary button in dark mode */
-        --accent-clr: #2563EB;
+      --primary-clr: #2563eb; /* brighter blue for dark backgrounds */
+      --secondary-clr: #f1f5f9; /* light slate for secondary button in dark mode */
+      --accent-clr: #2563eb;
 
         --link-clr: #F5F7FA;
         --link-hover-clr: #89ADF0; 
 
-        --border-clr: #1F2933;
+      --border-clr: #1f2933;
 
-        --header-bg-clr: #020617;
-        --header-text-clr: #E5E7EB;
+      --header-bg-clr: #020617;
+      --header-text-clr: #e5e7eb;
 
-        --footer-bg-clr: #020617;
-        --footer-text-clr: #E5E7EB;
+      --footer-bg-clr: #020617;
+      --footer-text-clr: #e5e7eb;
 
-        --button-bg-clr: #2563EB;
-        --button-text-clr: #FFFFFF;
-        --button-hover-bg-clr: #1450D2;
+      --button-bg-clr: #2563eb;
+      --button-text-clr: #ffffff;
+      --button-hover-bg-clr: #1450d2;
 
-        --card-bg-clr: #111827;
-        --card-border-clr: #1F2933;
+      --card-bg-clr: #111827;
+      --card-border-clr: #1f2933;
     }
 
-        & .dark {
-            display: none;
-        }
+    & .light {
+      display: none;
     }
 
     /* Repeat dark theme variables */
@@ -76,34 +74,36 @@ html {
         --text-clr: #E5E7EB;
         --heading-clr: #F9FAFB;
 
-        --primary-clr: #2563EB;        /* brighter blue for dark backgrounds */
-        --secondary-clr: #F1F5F9;      /* light slate for secondary button in dark mode */
-        --accent-clr: #2563EB;
+      --primary-clr: #2563eb; /* brighter blue for dark backgrounds */
+      --secondary-clr: #f1f5f9; /* light slate for secondary button in dark mode */
+      --accent-clr: #2563eb;
 
         --link-clr: #F5F7FA;
         --link-hover-clr: #89ADF0;
 
-        --border-clr: #1F2933;
+      --border-clr: #1f2933;
 
-        --header-bg-clr: #020617;
-        --header-text-clr: #E5E7EB;
+      --header-bg-clr: #020617;
+      --header-text-clr: #e5e7eb;
 
-        --footer-bg-clr: #020617;
-        --footer-text-clr: #E5E7EB;
+      --footer-bg-clr: #020617;
+      --footer-text-clr: #e5e7eb;
 
-        --button-bg-clr: #2563EB;
-        --button-text-clr: #FFFFFF;
-        --button-hover-bg-clr: #1450D2;
+      --button-bg-clr: #2563eb;
+      --button-text-clr: #ffffff;
+      --button-hover-bg-clr: #1450d2;
 
-        --card-bg-clr: #111827;
-        --card-border-clr: #1F2933;
-            & .light {
-                display: initial;
-            }
+      --card-bg-clr: #111827;
+      --card-border-clr: #1f2933;
 
-            & .light {
-                display: none;
-            }
-        }
+      /* changes emoji back to light */
+      & .light {
+        display: initial;
+      }
+
+      /* hides dark emoji */
+      & .dark {
+        display: none;
+      }
     }
 }
