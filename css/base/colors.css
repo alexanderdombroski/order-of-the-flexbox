@@ -8,8 +8,8 @@ html {
   --secondary-clr: #0f172a; /* dark slate for secondary button bg */
   --accent-clr: #1f6ae1; /* same as primary for consistency */
 
-  --link-clr: #f5f7fa;
-  --link-hover-clr: #174fb8; /* darker blue hover */
+    --link-clr: #F5F7FA;
+    --link-hover-clr: #89ADF0;     /* darker blue hover */
 
   --border-clr: #e5e7eb;
 
@@ -35,7 +35,7 @@ html {
   &.dark {
     /* Dark theme variables - colors changed */
     [data-theme="dark"] {
-      --bg-clr: #0b1220;
+      --bg-clr: #0e182b;
       --text-clr: #e5e7eb;
       --heading-clr: #f9fafb;
 
@@ -43,8 +43,8 @@ html {
       --secondary-clr: #f1f5f9; /* light slate for secondary button in dark mode */
       --accent-clr: #2563eb;
 
-      --link-clr: #2563eb;
-      --link-hover-clr: #1450d2;
+        --link-clr: #F5F7FA;
+        --link-hover-clr: #89ADF0; 
 
       --border-clr: #1f2933;
 
@@ -65,22 +65,21 @@ html {
     & .light {
       display: none;
     }
-  }
 
-  /* Repeat dark theme variables */
-  @media (prefers-color-scheme: dark) {
-    &:not(.light) {
-      /* Repeat Dark theme variables */
-      --bg-clr: #0b1220;
-      --text-clr: #e5e7eb;
-      --heading-clr: #f9fafb;
+    /* Repeat dark theme variables */
+    @media (prefers-color-scheme: dark) {
+        &:not(.dark) {
+            /* Repeat Dark theme variables */
+        --bg-clr: #0e182b;
+        --text-clr: #E5E7EB;
+        --heading-clr: #F9FAFB;
 
       --primary-clr: #2563eb; /* brighter blue for dark backgrounds */
       --secondary-clr: #f1f5f9; /* light slate for secondary button in dark mode */
       --accent-clr: #2563eb;
 
-      --link-clr: #2563eb;
-      --link-hover-clr: #1450d2;
+        --link-clr: #F5F7FA;
+        --link-hover-clr: #89ADF0;
 
       --border-clr: #1f2933;
 
@@ -107,5 +106,4 @@ html {
         display: none;
       }
     }
-  }
 }
