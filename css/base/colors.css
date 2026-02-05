@@ -1,30 +1,30 @@
 html {
   /* Light (base) theme variables - much better */
-  --bg-clr: #f5f7fa;
-  --text-clr: #0b1c2d;
-  --heading-clr: #111827;
+    --bg-clr: #f5f7fa;
+    --text-clr: #0b1c2d;
+    --heading-clr: #111827;
 
-  --primary-clr: #1f6ae1; /* strong blue */
-  --secondary-clr: #0f172a; /* dark slate for secondary button bg */
-  --accent-clr: #1f6ae1; /* same as primary for consistency */
+    --primary-clr: #1f6ae1; /* strong blue */
+    --secondary-clr: #0f172a; /* dark slate for secondary button bg */
+    --accent-clr: #1f6ae1; /* same as primary for consistency */
 
-  --link-clr: #f5f7fa;
-  --link-hover-clr: #174fb8; /* darker blue hover */
+    --link-clr: #f1f5f9;
+    --link-hover-clr: #759EF5;
 
-  --border-clr: #e5e7eb;
+    --border-clr: #e5e7eb;
 
-  --header-bg-clr: #0b1c2d;
-  --header-text-clr: #f5f7fa;
+    --header-bg-clr: #0b1c2d;
+    --header-text-clr: #f5f7fa;
 
-  --footer-bg-clr: #0b1c2d;
-  --footer-text-clr: #f5f7fa;
+    --footer-bg-clr: #0b1c2d;
+    --footer-text-clr: #f5f7fa;
 
-  --button-bg-clr: #1f6ae1;
-  --button-text-clr: #ffffff;
-  --button-hover-bg-clr: #174fb8;
+    --button-bg-clr: #1f6ae1;
+    --button-text-clr: #ffffff;
+    --button-hover-bg-clr: #174fb8;
 
-  --card-bg-clr: #ffffff;
-  --card-border-clr: #e5e7eb;
+    --card-bg-clr: #ffffff;
+    --card-border-clr: #e5e7eb;
 
   /* Changes emoji to dark */
   & .light {
@@ -35,7 +35,7 @@ html {
   &.dark {
     /* Dark theme variables - colors changed */
     [data-theme="dark"] {
-      --bg-clr: #0b1220;
+      --bg-clr: #0e182c;
       --text-clr: #e5e7eb;
       --heading-clr: #f9fafb;
 
@@ -43,8 +43,8 @@ html {
       --secondary-clr: #f1f5f9; /* light slate for secondary button in dark mode */
       --accent-clr: #2563eb;
 
-      --link-clr: #2563eb;
-      --link-hover-clr: #1450d2;
+      --link-clr: #f1f5f9;
+      --link-hover-clr: #759EF5;
 
       --border-clr: #1f2933;
 
@@ -71,7 +71,7 @@ html {
   @media (prefers-color-scheme: dark) {
     &:not(.light) {
       /* Repeat Dark theme variables */
-      --bg-clr: #0b1220;
+      --bg-clr: #0e182c;
       --text-clr: #e5e7eb;
       --heading-clr: #f9fafb;
 
@@ -79,8 +79,8 @@ html {
       --secondary-clr: #f1f5f9; /* light slate for secondary button in dark mode */
       --accent-clr: #2563eb;
 
-      --link-clr: #2563eb;
-      --link-hover-clr: #1450d2;
+      --link-clr: #f1f5f9;
+      --link-hover-clr: #759EF5;
 
       --border-clr: #1f2933;
 
