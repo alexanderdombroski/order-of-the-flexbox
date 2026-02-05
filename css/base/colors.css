@@ -9,7 +9,7 @@ html {
     --accent-clr: #1F6AE1;         /* same as primary for consistency */
 
     --link-clr: #F5F7FA;
-    --link-hover-clr: #174FB8;     /* darker blue hover */
+    --link-hover-clr: #89ADF0;     /* darker blue hover */
 
     --border-clr: #E5E7EB;
 
@@ -27,7 +27,7 @@ html {
     --card-border-clr: #E5E7EB;
 
     
-    & .dark {
+    & .light {
         display: none;
     }
 
@@ -36,7 +36,7 @@ html {
         /* Dark theme variables - colors changed */
         [data-theme="dark"] {
   
-        --bg-clr: #0B1220;
+        --bg-clr: #0e182b;
         --text-clr: #E5E7EB;
         --heading-clr: #F9FAFB;
 
@@ -44,8 +44,8 @@ html {
         --secondary-clr: #F1F5F9;      /* light slate for secondary button in dark mode */
         --accent-clr: #2563EB;
 
-        --link-clr: #2563EB;
-        --link-hover-clr: #1450D2;
+        --link-clr: #F5F7FA;
+        --link-hover-clr: #89ADF0; 
 
         --border-clr: #1F2933;
 
@@ -63,16 +63,16 @@ html {
         --card-border-clr: #1F2933;
     }
 
-    & .light {
-      /* display: none; */
+        & .dark {
+            display: none;
+        }
     }
-  }
 
     /* Repeat dark theme variables */
     @media (prefers-color-scheme: dark) {
-        &:not(.light) {
+        &:not(.dark) {
             /* Repeat Dark theme variables */
-        --bg-clr: #0B1220;
+        --bg-clr: #0e182b;
         --text-clr: #E5E7EB;
         --heading-clr: #F9FAFB;
 
@@ -80,8 +80,8 @@ html {
         --secondary-clr: #F1F5F9;      /* light slate for secondary button in dark mode */
         --accent-clr: #2563EB;
 
-        --link-clr: #2563EB;
-        --link-hover-clr: #1450D2;
+        --link-clr: #F5F7FA;
+        --link-hover-clr: #89ADF0;
 
         --border-clr: #1F2933;
 
@@ -97,13 +97,13 @@ html {
 
         --card-bg-clr: #111827;
         --card-border-clr: #1F2933;
-            & .dark {
+            & .light {
                 display: initial;
             }
 
-      & .light {
-        /* display: none; */
-      }
+            & .light {
+                display: none;
+            }
+        }
     }
-  }
 }
