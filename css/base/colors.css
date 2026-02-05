@@ -65,7 +65,6 @@ html {
     & .light {
       display: none;
     }
-  }
 
   /* Repeat dark theme variables */
   @media (prefers-color-scheme: dark) {
@@ -107,5 +106,4 @@ html {
         display: none;
       }
     }
-  }
 }
