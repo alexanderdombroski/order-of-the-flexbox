@@ -19,16 +19,20 @@
  *  - .form__input / .form__select / .form__textarea
  */
 
+
+
+ :root {
+   --error-clr: oklch(46.972% 0.17331 20.41);
+   --success-clr: oklch(66.992% 0.18704 149.273);
+ }
+ 
  .contact-form {
-   grid-template-columns: 1fr;
-  align-items: start;
   inline-size: 100%;
-  margin-inline: auto; 
-  padding: var(--spacing-med);
+  padding-bottom: 1rem;
 }
 
 .contact-form h2 {
-  margin-bottom: var(--spacing-med);
+  margin-bottom: var(--spacing-sm);
 }
 
 .form {
@@ -53,25 +57,22 @@
   font-family: var(--font-family-body);
   font-size: var(--font-size-md);
   line-height: var(--line-height-base);
-
   padding: calc(var(--rhythm-base) * 0.35) calc(var(--rhythm-base) * 0.5);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--form-border, currentColor);
-
-  background: var(--form-surface, transparent);
-  color: var(--form-text, inherit);
-
-  transition: border-color 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+  border: 1px solid var(--text-clr);
+  background: var(--bg-clr);
+  color: var(--text-clr);
 }
 
-:where(.form__input, .form__select, .form__textarea):hover {
-  border-color: var(--form-border-hover, currentColor);
-}
+:where(.form__input, .form__textarea):hover {
+  background-color:  color-mix(in oklch, var(--accent-clr), transparent 90%);
+} 
 
 :where(.form__input, .form__select, .form__textarea):focus-visible {
   outline: none;
-  border-color: var(--form-focus, currentColor);
-  box-shadow: 0 0 0 4px var(--form-focus-ring, transparent);
+   border-color: var(--accent-clr) ;
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--accent-clr), transparent 75%);
+
 }
 
 .form__textarea {
@@ -85,18 +86,14 @@
 }
 
 .form__group.is-error :where(.form__input, .form__select, .form__textarea) {
-  border-color: var(--form-error, currentColor);
-  background: var(--form-error-bg, transparent);
+  border-color: var(--error-clr);
+  background-color: color-mix(in oklch, var(--error-clr), transparent 90%);
 }
 
 .form__group.is-success :where(.form__input, .form__select, .form__textarea) {
-  border-color: var(--form-success, currentColor);
-  background: var(--form-success-bg, transparent);
-}
+  border-color: var(--success-clr);
+  background-color: color-mix(in oklch, var(--success-clr), transparent 90%);
 
-:where(.form__input, .form__select, .form__textarea):user-invalid {
-  border-color: var(--form-error, currentColor);
-  background: var(--form-error-bg, transparent);
 }
 
 .form__message {
@@ -106,10 +103,6 @@
 }
 
 .form__message.is-error {
-  color: var(--form-error, currentColor);
+  color: var(--error-clr);
   opacity: 1;
-}
-
-.form .button {
-  margin-top: calc(var(--rhythm-base) * 0.2);
 }
